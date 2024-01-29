@@ -1,19 +1,21 @@
 import React, { FC } from 'react'
 import Logo from '../assets/images/logo.png'
 import Image from 'next/image'
+import { Bars3Icon } from '@heroicons/react/16/solid'
 
 
 const Navbar:FC = () => {
   return (
-    <div className=" p-4 shadow-md w-full">
-        <div className="container mx-auto">
-            <div className="navbar lg:px-10">
-                <div className="navbar-start">
-                    <div className="dropdown">
+    <div className="lg:p-4 shadow-md w-full">
+        <div className="lg:container md:mx-auto">
+            <div className="navbar lg:px-10 justify-between">
+                <div className="navbar-start lg:flex-row justify-between w-full lg:w-max">
+                    <Image src={Logo} height={40} alt="djamo clone logo mouhamed bakhoum" />
+                    <div className="dropdown dropdown-left">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <Image src={Logo} height={48} alt="djamo clone logo mouhamed bakhoum" />
+                            <Bars3Icon height={24}/>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 lg:hidden">
+                        <ul tabIndex={0} className="menu menu-lg w-64 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box lg:hidden">
                             <li><a>Acceuil</a></li>
                             <li>
                                 <a>Produits & Services</a>
@@ -28,7 +30,6 @@ const Navbar:FC = () => {
                             <li><a>Apprendre</a></li>
                         </ul>
                     </div>
-                    <Image src={Logo} height={48} alt="djamo clone logo mouhamed bakhoum" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-xl rounded-full">
@@ -37,8 +38,9 @@ const Navbar:FC = () => {
                             <details>
                             <summary>Produits & Services</summary>
                             <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
+                                <li><a>Coffres</a></li>
+                                <li><a>Transferts</a></li>
+                                <li><a>Cartes</a></li>
                             </ul>
                             </details>
                         </li>
@@ -48,7 +50,7 @@ const Navbar:FC = () => {
                         <li><a>Apprendre</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end hidden lg:block lg:w-max">
                     <a className="btn btn-primary text-xl rounded-full">Rejoindre la liste d&apos;attente</a>
                 </div>
             </div>

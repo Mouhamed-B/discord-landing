@@ -31,8 +31,8 @@ const Header:FC = () => {
             <div className="container flex mx-auto gap-4">
                 <div className="w-full lg:w-1/2 flex lg:mx-8">
                     <div className="mx-auto lg:mr-0 lg:my-auto text-center lg:text-start mt-10">
-                        <h1 className="text-6xl lg:text-8xl font-semibold lg:font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 from-20% to-green-500 to-70%">No Stress,<br />Djamo Rek!</h1>
-                        <p className='text-2xl my-6'> L&apos; appli pour mieux gérer votre argent. <br />
+                        <h1 className="text-6xl lg:text-8xl font-semibold  bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 from-20% to-green-500 to-70%">No Stress,<br />Djamo Rek!</h1>
+                        <p className='text-xl my-6'> L&apos; appli pour mieux gérer votre argent. <br />
                                 Ouvrez un compte gratuit maintenant en un clic.
                         </p>
                         <form action="#" className="flex flex-col lg:flex-row gap-2">
@@ -54,13 +54,13 @@ const Header:FC = () => {
         </div>
         <div className="w-full bg-black pt-8 pb-12">
             <div className="container mx-auto">
-                <div className="lg:mx-14 lg:px-14 px-8 flex gap-8 flex-col lg:flex-row">
+                <div className="lg:mx-16 px-8 lg:px-14 flex gap-8 flex-col lg:flex-row">
                     {contents.map(({icon, title, text},index) => (
                         <div key={index} className='flex gap-4'>
                             <div>{icon}</div>
                             <div>
                                 <h2 className='text-white text-xl'>{title}</h2>
-                                <p className='text-gray-400 text-xl'>{text}</p>
+                                <p className='text-gray-500 text-xl'>{text}</p>
                             </div>
                         </div>
                     ))}

@@ -38,7 +38,7 @@ const Header:FC = () => {
                         <form action="#" className="flex flex-col lg:flex-row gap-2">
                             <div className="hidden lg:flex gap-2">
                                 <select className="select select-bordered w-max text-lg lg:text-xl">
-                                    <option selected>+221</option>
+                                    <option defaultValue={"+221"}>+221</option>
                                 </select>
                                 <input type="text" placeholder="Votre numero de telephone" className="input input-bordered text-xl" />
                             </div>

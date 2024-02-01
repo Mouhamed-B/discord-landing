@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import Script from "next/script";
 
 const futura = localFont({
   src: [
@@ -39,7 +40,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={futura.className}>{children}</body>
+      <body className={futura.className}>
+        {children}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C11XMFZW33"></Script>
+        <Script strategy="afterInteractive" id="ga">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-C11XMFZW33');`}
+        </Script>
+      </body>
     </html>
   );
 }
